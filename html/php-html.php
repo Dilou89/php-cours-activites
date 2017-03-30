@@ -51,26 +51,26 @@
         echo '<option value ="'.$year.'">'.$year."</option>";}
         ?></select>
       </form>
-      <hr>
+      <hr> 
 
-      --->
-      <form method="GET">
-       <label for='sexe'>Quel est votre sexe?</label>
-       <input type="checkbox" name="sexe">Fille </>
-       <input type="checkox" name="sexe">Garçon</>
-       <input type="checbox" name="sexe">Indéfini</>
-     </form>.
-     <?php
-     if(isset($_GET["btSubmit"])){
-      print_r($GET);
-      foreach ($(GET["sexe"]) as $value) {
-        echo "Je suis un(e) ".$value
-      }
-    }
+      <p>
 
-    ?>
+        <?php 
+
+        if($_GET["sexe"]=="fille"){
+
+          echo "Je suis une fille ";
+        }
+        if($_GET["sexe"]=="garcon"){
+
+          echo "Je suis un garcon ";
+        }
+
+        if(($_GET["sexe"]!="fille")&&($_GET['sexe']!="garcon")){
+
+          echo "Je suis indéfini ";}
+          ?></p>
 
 
-
-  </body>
-  </html>
+        </body>
+        </html>
